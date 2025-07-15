@@ -1,4 +1,4 @@
 from pydantic import BaseModel
 
-class URLRequest(BaseModel):
+class UrlCreate(BaseModel):
     url: str
