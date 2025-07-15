@@ -26,7 +26,7 @@ async def shorten_url(item: UrlCreate, db: Session = Depends(get_db)):
     db_url = Url(id=short_id, original_url=item.url)
     db.add(db_url)
     db.commit()
-    return {"short_url": f"https://short.url/ {short_id}"}
+    return {"short_url": f"https://{short_id}"}
 
 
 @app.get("/{short_id}")
